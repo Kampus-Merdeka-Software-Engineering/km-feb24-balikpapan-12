@@ -1,0 +1,9 @@
+h1{
+            text-align: center;
+            background-color: aqua;
+        }
+        @media only screen and (width < 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
