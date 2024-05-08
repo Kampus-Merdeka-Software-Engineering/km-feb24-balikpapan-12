@@ -5,66 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <header>
-        <h1>Dashboard</h1>
+        <h1>Dashboard NewYork Property</h1>
     </header>
     <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Settings</a></li>
-        </ul>
+        <section class="filter">
+            <select name="building" id="">
+                <option value="">building</option>
+                <option value="apartment">apartment</option>
+                <option value="single house">single house</option>
+                <option value="double house">double house</option>
+            </select>
+
+            <select name="Sales" id="">
+                <option value="">Sales</option>
+                <option value="$0 - $500.000">$0 - $500.000</option>
+                <option value="$500.000 - $1.000.000">$500.000 - $1.000.000</option>
+                <option value="$1.000.000 - unlimeted">$1.000.000 - unlimited</option>
+            </select>
+
+            <select name="date" id="">
+                <option value="">Jul 1 2016 - Aug 30 2017</option>
+            </select>
+        </section>
     </nav>
+    <aside>
+        <aside>
+            <section class="main">
+                <article class="analytics">
+                    <h2>Analytics</h2>
+                    <p>Welcome to the Analytics section. Here, you can track various
+                        metrics and gain insights into your data.</p>
+                    <div class="chart">
+                        <img src="img/download.jpg" alt="Analytics Chart">
+                    </div>
+                </article>
 
-    <section class="main">
-        <article class="analytics">
-            <h2>Analytics</h2>
-            <p>Welcome to the Analytics section. Here, you can track various
-                metrics and gain insights into your data.</p>
-            <div class="chart">
-                <img src="download.jpg" alt="Analytics Chart">
-            </div>
-        </article>
-
-        <article class="reports">
-            <h2>Reports</h2>
-            <p>laporan.</p>
-            <div class="report-list">
-                <ul>
-                    <li>Monthly Sales Report</li>
-                    <li>Customer Satisfaction Survey Results</li>
-                    <li>Quarterly Financial Overview</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Nisi veniam mollitia ipsum nam alias sequi voluptatum officia
-                        saepe laudantium repudiandae molestiae obcaecati, velit adipisci,
-                        minus, eius quos quibusdam suscipit ipsa?</li>
-                </ul>
-            </div>
-        </article>
-        <article class="insights">
-            <h2>Insight</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sit sequi pariatur maiores expedita numquam, dolor rem harum,
-                commodi ab sint non repudiandae nam! Velit sed voluptatum,
-                nulla reprehenderit natus expedita?</p>
-            <div class="insight">
-                <ul>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                </ul>
-            </div>
-        </article>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Dashboard. All rights reserved.</p>
-    </footer>
+                <article class="reports">
+                    <h2>Reports</h2>
+                    <p>laporan.</p>
+                    <div class="report-list">
+                        <ul>
+                            <li>Monthly Sales Report</li>
+                            <li>Customer Satisfaction Survey Results</li>
+                            <li>Quarterly Financial Overview</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nisi veniam mollitia ipsum nam alias sequi voluptatum officia
+                                saepe laudantium repudiandae molestiae obcaecati, velit adipisci,
+                                minus, eius quos quibusdam suscipit ipsa?</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="insights">
+                    <h2>Insight</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sit sequi pariatur maiores expedita numquam, dolor rem harum,
+                        commodi ab sint non repudiandae nam! Velit sed voluptatum,
+                        nulla reprehenderit natus expedita?</p>
+                    <div class="insight">
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+        </aside>
+        </main>
+        <footer>
+            <p>&copy; 2024 Dashboard. All rights reserved.</p>
+        </footer>
 </body>
 
 </html>
