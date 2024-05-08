@@ -106,6 +106,7 @@ article {
     text-decoration: rgb(red, green, blue);
 }
 
+
 footer {
     background-color: #333;
     color: #fff;
@@ -115,4 +116,11 @@ footer {
 img{
     width: 250px;
     height: 155px;
+}
+.image-chart{
+    width: 450px;
+    height: auto;
+}
+.main-section2{
+    margin-top: -3%;
 }
