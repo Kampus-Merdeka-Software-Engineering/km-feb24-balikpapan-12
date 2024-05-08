@@ -68,6 +68,11 @@ article {
     padding: 20px;
     margin: 10px;
     flex-basis: 45%;
+    flex-grow: 1;
+    background-color: lightblue;
+    margin-bottom: 30px;
+    width: 350px;
+    height: 350px;
 }
 
 .analytics {
@@ -106,4 +111,8 @@ footer {
     color: #fff;
     padding: 10px;
     text-align: center;
+}
+img{
+    width: 250px;
+    height: 155px;
 }
