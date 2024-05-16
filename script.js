@@ -1,2 +1,0 @@
-alert("Hello! I am an alert box!!");
-alert("Fajarrr");
