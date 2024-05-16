@@ -4,6 +4,7 @@
     margin-right: auto;
     padding: 10px;
     box-sizing: border-box;
+    font-family: Poppins;
 }
 
 /* Basic styles */
@@ -182,4 +183,9 @@ img {
 
 .main-section2 {
     margin-top: -3%;
+}
+.icon-header{
+    width: 50px;
+    height: auto;
+    margin-top: 0%;
 }

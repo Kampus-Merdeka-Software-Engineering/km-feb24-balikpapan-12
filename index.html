@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+     <script src="mapdata.js"></script>
+    <script src="statemap.js"></script>
 </head>
 
 <body>
@@ -28,7 +30,8 @@
                 <option value="single house">single house</option>
                 <option value="double house">double house</option>
             </select>
-
+         
+            <img src="img/icon/sale_icon.png" alt="" class="icon-header">
             <select name="Sales" id="">
                 <option value="">Sales</option>
                 <option value="$0 - $500.000">$0 - $500.000</option>
@@ -47,12 +50,11 @@
 
             <section class="main">
                 <article class="analytics">
-                    <h2>Analytics</h2>
-                    <p>Welcome to the Analytics section. Here, you can track various
-                        metrics and gain insights into your data.</p>
-                    <div class="chart">
-                        <img src="img/download.jpg" alt="Analytics Chart">
-                    </div>
+                    <div>
+			<h1>NYC Borough Map</h1>
+			<div style="max-width: 700px"> <!-- Keep map above fold -->
+				<div id="map"></div>
+			</div>
                 </article>
 
                 <article class="reports">
