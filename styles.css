@@ -101,7 +101,7 @@ main {
     padding: 4px
 }
 
-section.main {
+.main {
     display: flexbox;
     justify-content: space-around;
     margin-left: auto;
@@ -112,7 +112,121 @@ section.main {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: baseline;
+    max-width: 800px;
+    margin: 0 auto;
 }
+
+.main .analytics {
+    position: absolute;
+    flex-direction: column;
+    margin-right: 2rem;
+    padding: 10px;
+    width: 28rem;
+    height: auto;
+    margin-top: 19px;
+    box-shadow:  0 4px 8px rgba(255, 255, 255, 0.8);
+}
+
+.main-2 {
+    display: flexbox;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.main-2 .analytics {
+    position: absolute;
+    flex-direction: column;
+    padding: 10px;
+    width: 22.5rem;
+    height: auto;
+    margin-top: -20px;
+    right: 20px;
+    box-shadow:  0 4px 8px rgba(255, 255, 255, 0.8);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 0.5px;
+    margin-bottom: 8rem;
+}
+
+
+.content .box {
+    position: absolute;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    box-shadow:  0 4px 8px rgba(255, 255, 255, 0.8);
+    background-color: #ffffff;
+    font-size: 15px;
+    width: 100%;
+    max-width: 319px;
+    height: auto;
+    left: 40px;
+    padding-top: 4px;
+    padding-left:20px;
+    margin-top: -40px;
+}
+
+.box h3 {
+    text-align: left;
+}
+
+.box p {
+    text-align: left;
+    font-size: 20px;
+}
+
+
+article {
+    background-color: #1d5555;
+    padding: 20px;
+    margin: 5px;
+    flex-basis: 45%;
+}
+
+.analytics {
+    border-radius: 8px;
+    text-align: center;
+}
+
+.chart {
+    text-align: center;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.reports {
+    border-radius: 8px;
+    text-align: center;
+}
+
+.report-list ul li {
+    display: flexbox;
+    background-color: #f5ca7b49;
+    color: #f0f0f0;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding-bottom: 3px;
+}
+
+.insights {
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: rgb(red, green, blue);
+}
+
 
 article {
     background-color: #1d5555;
