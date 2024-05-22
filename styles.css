@@ -258,14 +258,19 @@ article {
     padding: 20px;
 }
 
-
-
-
 footer {
     margin-top: 23%;
     background-color: #333;
     color: #fff;
     padding: 10px;
     text-align: center;
+}
+.img-top{
+    width: 280px;
+    height: auto;
+}
+.img-map{
+    width: auto;
+    height: 230px;
 }
 
