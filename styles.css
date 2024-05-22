@@ -22,6 +22,7 @@ header {
     background-image: url(/img/background_header.jpg);
     padding: 10px;
 }
+
 .header h1 {
     color: rgb(255, 255, 255);
     text-align: center;
@@ -51,7 +52,7 @@ header {
     background: turquoise;
 }
 
-.icon-header{
+.icon-header {
     width: 50px;
     height: auto;
     margin-top: 0%;
@@ -101,6 +102,7 @@ nav ul li a {
     color: #fff;
     text-decoration: solid;
 }
+
 .main {
     display: flexbox;
     justify-content: space-around;
@@ -124,7 +126,7 @@ nav ul li a {
     width: 32rem;
     height: 374px;
     margin-top: 19px;
-    box-shadow:  0 4px 8px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
 }
 
 .main-2 {
@@ -151,11 +153,11 @@ nav ul li a {
     height: 374px;
     margin-top: -20px;
     right: 20px;
-    box-shadow:  0 4px 8px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
 }
 
 .main-3 {
-   
+
     display: flexbox;
     justify-content: space-around;
     margin-left: auto;
@@ -170,38 +172,38 @@ nav ul li a {
     margin: 0 auto;
 }
 
-.main-3 .high-building{
-     border-radius: 8px;
+.main-3 .high-building {
+    border-radius: 8px;
     position: absolute;
     flex-direction: column;
     padding: 10px;
     width: 28rem;
     height: 374px;
     left: 20px;
-    box-shadow:  0 4px 8px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
     text-align: center;
 }
 
-.main-3 .lower-building{
-     border-radius: 8px;
+.main-3 .lower-building {
+    border-radius: 8px;
     position: absolute;
     flex-direction: column;
     padding: 10px;
     text-align: center;
     width: 28rem;
     height: 374px;
-    box-shadow:  0 4px 8px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
     margin-top: -76px;
 }
 
 .main-3 .analytics {
-  position: absolute;
+    position: absolute;
     flex-direction: column;
     padding: 10px;
     width: 24rem;
     height: 374px;
     right: 20px;
-    box-shadow:  0 4px 8px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
     margin-top: -35px;
 }
 
@@ -218,7 +220,7 @@ nav ul li a {
     position: absolute;
     flex-direction: column;
     border-radius: 0.5rem;
-    box-shadow:  0 4px 8px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
     background-color: #ffffff;
     font-size: 15px;
     width: 100%;
@@ -226,7 +228,7 @@ nav ul li a {
     height: auto;
     left: 40px;
     padding-top: 4px;
-    padding-left:20px;
+    padding-left: 20px;
     margin-top: -40px;
 }
 
@@ -265,12 +267,13 @@ footer {
     padding: 10px;
     text-align: center;
 }
-.img-top{
+
+.img-top {
     width: 280px;
     height: auto;
 }
-.img-map{
+
+.img-map {
     width: auto;
     height: 230px;
 }
-
