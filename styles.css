@@ -116,14 +116,13 @@ nav ul li a {
     margin: 0 auto;
 }
 
-
 .main .analytics {
     position: absolute;
     flex-direction: column;
     margin-right: 2rem;
     padding: 10px;
-    width: 28rem;
-    height: auto;
+    width: 32rem;
+    height: 374px;
     margin-top: 19px;
     box-shadow:  0 4px 8px rgba(255, 255, 255, 0.8);
 }
@@ -148,11 +147,62 @@ nav ul li a {
     position: absolute;
     flex-direction: column;
     padding: 10px;
-    width: 22.5rem;
-    height: auto;
+    width: 24rem;
+    height: 374px;
     margin-top: -20px;
     right: 20px;
     box-shadow:  0 4px 8px rgba(255, 255, 255, 0.8);
+}
+
+.main-3 {
+   
+    display: flexbox;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.main-3 .high-building{
+     border-radius: 8px;
+    position: absolute;
+    flex-direction: column;
+    padding: 10px;
+    width: 28rem;
+    height: 374px;
+    left: 20px;
+    box-shadow:  0 4px 8px rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.main-3 .lower-building{
+     border-radius: 8px;
+    position: absolute;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    width: 28rem;
+    height: 374px;
+    box-shadow:  0 4px 8px rgba(255, 255, 255, 0.8);
+    margin-top: -76px;
+}
+
+.main-3 .analytics {
+  position: absolute;
+    flex-direction: column;
+    padding: 10px;
+    width: 24rem;
+    height: 374px;
+    right: 20px;
+    box-shadow:  0 4px 8px rgba(255, 255, 255, 0.8);
+    margin-top: -35px;
 }
 
 .content {
@@ -212,6 +262,7 @@ article {
 
 
 footer {
+    margin-top: 23%;
     background-color: #333;
     color: #fff;
     padding: 10px;
