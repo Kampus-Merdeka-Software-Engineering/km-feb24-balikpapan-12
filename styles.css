@@ -1,7 +1,7 @@
 /* Resetting default margin and padding */
 * {
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     padding: 0;
     box-sizing: border-box;
     font-family: Poppins;
@@ -280,7 +280,7 @@ footer {
 
 .chart-container {
     width: 100%;
-    height: 150px;
+    /* height: 150px; */
     position: relative;
     
 }
