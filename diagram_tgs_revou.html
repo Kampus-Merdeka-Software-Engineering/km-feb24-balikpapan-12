@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<div id="totalIncome" style="text-align:center; margin-top:20px; font-size:16px; font-weight:bold;">
+  Total Income: $3,775,322
+</div>
+
+<script>
+const xValues = ["Queens", "Brooklyn", "Manhattan Borough", "Staten Island", "Bronx"];
+const yValues = ["18.050", "14.165", "10.285", "5.967", "4.925"];
+const barColors = [
+  "#7c0151",
+  "#c17692",
+  "#c8b2c5",
+  "#c3b7e9",
+  "#eab595"
+];
+
+new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Top 5 Property By Sale Price",
+      fontColor: "#000000" // Set the font color of the title to black
+    },
+    legend: {
+      labels: {
+        fontColor: "#000000" // Set the font color of the legend labels to black
+      }
+    }
+  }
+});
+</script>
+
+</body>
+</html>
