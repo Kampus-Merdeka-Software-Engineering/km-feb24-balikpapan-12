@@ -1,198 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
-
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-
-  <body>
-    <header>
-      <div class="header">
-        <h1>Dashboard NYC Property Sales</h1>
-      </div>
-
-      <section class="filter">
-        <select name="date" id="borough">
-          <option value="All borough">All Borough</option>
-          <option value="Manhattan">Manhattan</option>
-          <option value="Bronx">Bronx</option>
-          <option value="Queen">Queen</option>
-          <option value="Staten Island">Staten Island</option>
-          <option value="Brooklyn">Brooklyn</option>
-        </select>
-
-        <!-- <<img src="img/icon/sale_icon.png" alt="" class="icon-header">
-            <select name="Sales" id="">
-                <option value="">Sales</option>
-                <option value="$0 - $500.000">$0 - $500.000</option>
-                <option value="$500.000 - $1.000.000">$500.000 - $1.000.000</option>
-                <option value="$1.000.000 - unlimeted">$1.000.000 - unlimited</option>
-
-            </select>> -->
-        <label for="date"></label>
-        <input type="date" id="date" name="date" />
-        <a
-          href="https://docs.google.com/spreadsheets/d/1ZuDo8sC-PvVGNqK69gyDTrvqt5XWRgx9/edit?usp=drive_link&ouid=115020941835307320291&rtpof=true&sd=true"
-          target="_blank"
-          >DataSet NYC Property</a
-        >
-      </section>
-    </header>
-    <!-- Sidebar -->
-    <main>
-      <aside>
-        <div class="wrapper">
-          <div class="sidebar">
-            <!-- profile image & text -->
-            <div class="profile">
-              <img src="img/Revou.png" alt="profile_picture" />
-              <h3>Section Balikpapan - Team 12</h3>
-              <a href="mailto:blkpn.team12.revou@gmail.com"
-                >blkpn.team12.revou@gmail.com</a
-              >
-            </div>
-            <!-- menu item -->
-            <ul>
-              <li><a class="active" href="#">Dashboard</a></li>
-              <li><a href="#">Problem Statement</a></li>
-              <li><a href="#">Recommendation</a></li>
-            </ul>
-          </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            padding: 20px;
+            color: rgb(90, 94, 95);
+        }
+        .footer-section {
+            flex: 1;
+            margin: 0 10px;
+            padding: 25px;
+            background-color: rgb(117, 145, 155);
+            color: rgb(238, 247, 248);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: flex-start; /* Align content to the top */
+            justify-content: center; /* Center content horizontally */
+            text-align: center; /* Center text */
+            min-height: 150px; /* Ensure consistent box height */
+        }
+        .footer-section h1,
+        .footer-section h2,
+        .footer-section h3 {
+            margin-top: 0;
+            font-weight: 200; /* Use a thinner font weight */
+        }
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>Top High Sales By Category</h3>
         </div>
-      </aside>
-      <!--First Box-->
-      <section>
-        <div class="main">
-          <article class="analytics">
-            <h2>Sales Volume</h2>
-            <div class="chart-container">
-              <canvas id="chartSales"></canvas>
-            </div>
-
-            <!-- <div class="chart">
-                        <img src="/img/chart_sales_trend.jpg" alt="Analytics Chart">
-                    </div> -->
-          </article>
-
-          <div class="map">
-            <article class="analytics">
-              <h2>Map Borough</h2>
-              <img class="img-map" src="img/map borough.png" alt="" />
-            </article>
-          </div>
+        <div class="footer-section">
+            <h3>Category By Average Price</h3>
         </div>
-        <div class="card">
-          <div class="content">
-            <div class="box">
-              <h3>Total Revenue</h3>
-              <p>$245,875</p>
-            </div>
-          </div>
-
-          <div class="content">
-            <div class="box">
-              <h3>Total Transaction</h3>
-              <p>$420.231</p>
-            </div>
-          </div>
-
-          <div class="content">
-            <div class="box">
-              <h3>Sales Average</h3>
-              <p>$420.231</p>
-            </div>
-          </div>
+        <div class="footer-section">
+            <h3>Top 5 Lowest Sales By Category</h3>
         </div>
-      </section>
-
-      <!--Second Box-->
-      <section class="top-building">
-        <div class="main-high-building">
-          <article class="high-building">
-            <h2>Top 5 Highest Sales by Categories</h2>
-            <img class="img-top" src="img/top building.png" alt="" />
-          </article>
-        </div>
-
-        <div>
-          <div class="main-high-building">
-            <article class="analytics">
-              <h2>Categories by Average Price</h2>
-              <img class="img-top" src="img/top building.png" alt="" />
-            </article>
-          </div>
-        </div>
-        <div>
-          <div class="main-high-building">
-            <article class="lower-building">
-              <h2>Top 5 Lowest Sales by Category</h2>
-              <img class="img-top" src="img/top building.png" alt="" />
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2024 Dashboard. All rights reserved.</p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
-    <script>
-      const chartSales = document.getElementById("chartSales").getContext("2d");
-
-      const renderSalesTrend = () => {
-        new Chart(chartSales, {
-          type: "bar",
-          data: {
-            labels: [
-              "Januari",
-              "Februari",
-              "Maret",
-              "April",
-              "Mei",
-              "Juni",
-              "Juli",
-              "Agustus",
-              "September",
-              "Oktober",
-              "November",
-              "Desember",
-            ],
-            datasets: [
-              {
-                label: "Total Penjualan",
-                data: [
-                  5704, 8322, 12448, 8757, 10123, 5544, 8614, 13051, 10353,
-                  8473, 6809, 12320,
-                ],
-                backgroundColor: "rgba(75, 192, 192, 0.2)",
-                borderColor: "rgba(75, 192, 192, 1)",
-                borderWidth: 1,
-              },
-            ],
-          },
-          options: {
-            // responsive: true,
-            // maintainAspectRatio: false,
-            scales: {
-              y: {
-                beginAtZero: true,
-              },
-            },
-          },
-        });
-      };
-
-      fetch("./json/chartSales.json")
-        .then((response) => response.json())
-        .then((response) => {
-          console.log(response.datasets);
-        });
-    </script>
-  </body>
+</body>
 </html>
-
