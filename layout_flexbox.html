@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            padding: 20px;
+            color: rgb(90, 94, 95);
+        }
+        .footer-section {
+            flex: 1;
+            margin: 0 10px;
+            padding: 25px;
+            background-color: rgb(117, 145, 155);
+            color: rgb(238, 247, 248);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: flex-start; /* Align content to the top */
+            justify-content: center; /* Center content horizontally */
+            text-align: center; /* Center text */
+            min-height: 150px; /* Ensure consistent box height */
+        }
+        .footer-section h1,
+        .footer-section h2,
+        .footer-section h3 {
+            margin-top: 0;
+            font-weight: 200; /* Use a thinner font weight */
+        }
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>Top High Sales By Category</h3>
+        </div>
+        <div class="footer-section">
+            <h3>Category By Average Price</h3>
+        </div>
+        <div class="footer-section">
+            <h3>Top 5 Lowest Sales By Category</h3>
+        </div>
+    </footer>
+</body>
+</html>
