@@ -11,6 +11,7 @@
     <header>
       <div class="header">
         <h1>Dashboard NYC Property Sales</h1>
+        <!-- <h3>NYC Property Overview</h3> -->
       </div>
 
       <section class="filter">
@@ -22,14 +23,8 @@
           <option value="Staten Island">Staten Island</option>
           <option value="Brooklyn">Brooklyn</option>
         </select>
-
-        <!-- <<img src="img/icon/sale_icon.png" alt="" class="icon-header">
-            <select name="Sales" id="">
-                <option value="">Sales</option>
-                <option value="$0 - $500.000">$0 - $500.000</option>
-                <option value="$500.000 - $1.000.000">$500.000 - $1.000.000</option>
-                <option value="$1.000.000 - unlimeted">$1.000.000 - unlimited</option>
-            </select>> -->
+        <label for="date"></label>
+        <input type="date" id="date" name="date" />
         <label for="date"></label>
         <input type="date" id="date" name="date" />
         <a
@@ -46,8 +41,8 @@
           <div class="sidebar">
             <!-- profile image & text -->
             <div class="profile">
-              <img src="img/Revou.png" alt="profile_picture" />
               <h3>Section Balikpapan - Team 12</h3>
+              <img src="img/Revou.png" alt="profile_picture" />
               <a href="mailto:blkpn.team12.revou@gmail.com"
                 >blkpn.team12.revou@gmail.com</a
               >
@@ -69,38 +64,32 @@
             <div class="chart-container">
               <canvas id="chartSales"></canvas>
             </div>
-
-            <!-- <div class="chart">
-                        <img src="/img/chart_sales_trend.jpg" alt="Analytics Chart">
-                    </div> -->
           </article>
 
           <div class="map">
             <article class="analytics">
               <h2>Map Borough</h2>
-              <img class="img-map" src="img/map borough.png" alt="" />
+              <img class="img-map" src="img/image-map.png" alt="map" />
             </article>
           </div>
         </div>
-        <div class="card">
-          <div class="content">
-            <div class="box">
-              <h3>Total Revenue</h3>
-              <p>$245,875</p>
+        <div class="container">
+          <div class="card">
+            <div class="card-header">Total Revenue</div>
+            <div class="card-body">
+              <div class="value">$420.231</div>
             </div>
           </div>
-
-          <div class="content">
-            <div class="box">
-              <h3>Total Transaction</h3>
-              <p>$420.231</p>
+          <div class="card">
+            <div class="card-header">Total Transaction</div>
+            <div class="card-body">
+              <div class="value">245.875</div>
             </div>
           </div>
-
-          <div class="content">
-            <div class="box">
-              <h3>Sales Average</h3>
-              <p>$420.231</p>
+          <div class="card">
+            <div class="card-header">Avarage sales</div>
+            <div class="card-body">
+              <div class="value">$322.231</div>
             </div>
           </div>
         </div>
