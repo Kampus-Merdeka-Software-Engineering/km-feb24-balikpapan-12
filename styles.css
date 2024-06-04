@@ -1,7 +1,5 @@
 /* Resetting default margin and padding */
 * {
-  /* margin-left: auto;
-    margin-right: auto; */
   padding: 0;
   box-sizing: border-box;
   font-family: Poppins;
@@ -9,8 +7,7 @@
 
 /* Basic styles */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: inter;
   border: solid 1px;
   border-color: grey;
   border-radius: 10px;
@@ -21,8 +18,8 @@ body {
 
 header {
   width: 100%;
-  height: auto;
-  background-color: rgb(11, 11, 54);
+  height: 100%;
+  background-image: url(/img/BG-Header.png);
   padding: 0px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -31,45 +28,33 @@ header {
 h1 {
   color: #ffffff;
   text-align: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 20px;
+  font-family: inter;
+  font-size: 21px;
   margin-top: 1px;
-  padding: 20px;
-  /*display: flex;
-  justify-content: space-between;
-  flex-direction: column;*/
-}
-
-.header input[type="text"] {
-  padding: 5px;
-  font-size: 16px;
-  border: none;
-  border-radius: 3px;
+  padding: 20px 0 5px 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
 .main {
   padding: 0;
   display: flex;
+  gap: 10px;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: baseline;
-  max-width: 800px;
-  margin: 0 auto;
+  margin-left: 500px;
 }
 
 .main .analytics {
-  position: absolute;
-  right: 416px;
   padding: 10px;
   width: 32%;
   height: 374px;
-  margin-top: 8px;
+  margin-top: 20px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
 }
 
-.map {
+/* .map {
   display: flexbox;
   justify-content: space-around;
   margin-left: auto;
@@ -82,105 +67,111 @@ h1 {
   align-items: baseline;
   max-width: 800px;
   margin: 0 auto;
-}
+} */
 
 .map .analytics {
-  position: absolute;
-  flex-direction: column;
   padding: 10px;
-  width: 24rem;
+  width: 25rem;
   height: 374px;
-  margin-top: -20px;
-  right: 20px;
+  margin-top: 20px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
+}
+.map .analytics img {
+  width: 100%;
+  height: 80%;
+}
+.top-building {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
 }
 
 .main-high-building {
-  display: flexbox;
-  justify-content: space-around;
+  flex: 1;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: baseline;
+  padding: 0;
+  justify-content: flex-start;
   max-width: 800px;
   margin: 0 auto;
 }
 
 .main-high-building .high-building {
   border-radius: 8px;
-  position: absolute;
-  /*flex-direction: column;*/
   padding: 10px;
   width: 28rem;
   height: 374px;
-  left: 20px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
   text-align: center;
 }
 
 .main-high-building .lower-building {
   border-radius: 8px;
-  display: inline-block;
-  flex-direction: column;
   padding: 10px;
   text-align: center;
   width: 28rem;
   height: 374px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
-  margin-top: -76px;
 }
 
-.main-high-building .analytics {
-  position: absolute;
-  flex-direction: column;
+.main-high-building .avg {
   padding: 10px;
-  width: 24rem;
+  width: 25rem;
   height: 374px;
-  right: 20px;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
-  margin-top: -35px;
 }
-.card {
+.container {
   position: absolute;
-  top: 200px;
-  width: calc(100% - 225px);
-  left: 225px;
-}
-.content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-top: 0.5px;
-  margin-bottom: 8rem;
-  padding-left: 10px;
-}
-.content .box {
-  position: absolute;
+  top: 160px;
+  left: 250px;
+  display: flex;
   flex-direction: column;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
-  background-color: #ffffff;
-  font-size: 15px;
-  width: 19%;
-  max-width: 319px;
-  height: auto;
-  left: 40px;
-  padding-top: 4px;
-  padding-left: 20px;
-  margin-top: -40px;
+  gap: 1rem;
+  width: 230px;
 }
 
-.box h3 {
-  text-align: left;
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.box p {
-  text-align: left;
-  font-size: 20px;
+.card-header {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.value {
+  font-size: 1.5rem;
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.text {
+  font-size: 0.8rem;
 }
 
 article {
@@ -202,7 +193,7 @@ article {
 }
 
 footer {
-  margin-top: 35%;
+  margin-top: 0;
   background-color: #333;
   color: #fff;
   padding: 10px;
@@ -223,21 +214,6 @@ footer {
 
 .chart-container {
   width: 100%;
-  /* height: 150px; */
-  position: relative;
-}
-
-.top-building {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: 300px;
-  z-index: 1;
-  margin-top: 20px;
-  margin-bottom: -165px;
-  padding: 10px;
-  text-align: center;
 }
 
 #date {
@@ -282,13 +258,11 @@ footer {
 }
 .filter a {
   position: relative;
-  left: 80%;
+  left: 42%;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 150px;
   margin-right: 10px;
-  gap: 10px;
-  padding: 10px;
   font-size: 15px;
   border: 1px solid #333;
   border-radius: 15px;
@@ -296,7 +270,7 @@ footer {
   text-align: right;
   text-decoration: none;
   color: black;
-  background-color: #03f7ff;
+  background-color: #3cddec;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
 .filter a:hover {
@@ -364,7 +338,6 @@ footer {
 .sidebar ul li a.active {
   color: #000000;
   background: #eaf9ff;
-  /* border-right: 2px solid rgb(5, 68, 104); */
   border-radius: 8px;
 }
 
@@ -378,9 +351,18 @@ footer {
   display: block;
 }
 
+.data-tables {
+  border: 1px solid black;
+  box-sizing: border-box;
+  width: 100%;
+  height: 200%;
+}
+.data-tables h1 {
+  color: black;
+}
+
 @media screen and (min-width: 1200px) {
   .container_box {
     grid-template-columns: repeat(3, 1fr);
   }
-
 }

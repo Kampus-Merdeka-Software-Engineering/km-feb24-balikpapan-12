@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: blue;
+  padding: 20px;
+  color: white;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
+  background-color: white;
+  color: blue;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-section h3 {
+  margin-top: 0;
+}
