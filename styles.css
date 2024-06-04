@@ -53,22 +53,6 @@ h1 {
   margin-top: 20px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
 }
-
-/* .map {
-  display: flexbox;
-  justify-content: space-around;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: baseline;
-  max-width: 800px;
-  margin: 0 auto;
-} */
-
 .map .analytics {
   padding: 10px;
   width: 25rem;
@@ -216,7 +200,7 @@ footer {
   width: 100%;
 }
 
-#date {
+.date {
   border-radius: 15px;
   border: 1px solid #8f8a8a;
   height: 30px;
@@ -229,7 +213,7 @@ footer {
   background-color: rgb(11, 11, 54);
   color: rgb(255, 255, 255);
 }
-#borough {
+#borough-filter {
   border-radius: 15px;
   border: 1px solid #8f8a8a;
   height: 30px;
@@ -352,6 +336,7 @@ footer {
 }
 
 .data-tables {
+  background: #ffffff;
   border: 1px solid black;
   box-sizing: border-box;
   width: 100%;

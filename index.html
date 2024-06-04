@@ -1,228 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
-    <link
-      href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
 
-  <body>
-    <header>
-      <div class="header">
-        <h1>Dashboard NYC Property Sales</h1>
-        <!-- <h3>NYC Property Overview</h3> -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NYC Property Sales Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link href="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.0.8/r-3.0.2/datatables.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <h1>Dashboard NYC Property Sales</h1>
+    </div>
+
+    <section class="filter">
+      <select name="date" id="borough-filter">
+        <option value="-1">All Borough</option>
+      </select>
+
+      <input type="date" class="date" name="startDate" id="startDate" min="2016-09-01" max="2017-08-31" />
+      <input type="date" class="date" name="endDate" id="endDate" min="2016-09-01" max="2017-08-31" />
+      <a href="https://docs.google.com/spreadsheets/d/1ZuDo8sC-PvVGNqK69gyDTrvqt5XWRgx9/edit?usp=sharing&ouid=112421625717964448791&rtpof=true&sd=true"
+        target="_blank">DataSet NYC Property</a>
+    </section>
+  </header>
+  <!-- Sidebar -->
+  <main>
+    <aside>
+      <div class="wrapper">
+        <div class="sidebar">
+          <!-- profile image & text -->
+          <div class="profile">
+            <h3>Section Balikpapan - Team 12</h3>
+            <img src="img/Revou.png" alt="profile_picture" />
+            <a href="mailto:blkpn.team12.revou@gmail.com">blkpn.team12.revou@gmail.com</a>
+          </div>
+          <!-- menu item -->
+          <ul>
+            <li><a class="active" href="#">Dashboard</a></li>
+            <li><a href="#">Problem Statement</a></li>
+            <li><a href="#">Recommendation</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    <!--First Box-->
+    <section>
+      <div class="main">
+        <article class="analytics">
+          <h2>Sales Volume</h2>
+          <div class="chart-container">
+            <canvas id="totalMontlySales"></canvas>
+          </div>
+        </article>
+
+        <div class="map">
+          <h2>NYC Map Borough</h2>
+          <div id="map" class="analytics"></div>
+
+        </div>
+      </div>
+      <div class="container">
+        <div class="card">
+          <div class="card-header">Total Revenue</div>
+          <div class="card-body">
+            <div class="value" id="totalSales"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">Total Transaction</div>
+          <div class="card-body">
+            <div class="value" id="totalUnits"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">Avarage sales</div>
+          <div class="card-body">
+            <div class="value" id="averageSales"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Second Box-->
+    <section class="top-building">
+      <div class="main-high-building">
+        <article class="high-building">
+          <h2>Top 5 Highest Sales by Categories</h2>
+          <canvas id="topCategoriesHorizontalBarChart"></canvas>
+        </article>
       </div>
 
-      <section class="filter">
-        <select name="date" id="borough">
-          <option value="All borough">All Borough</option>
-          <option value="Manhattan">Manhattan</option>
-          <option value="Bronx">Bronx</option>
-          <option value="Queen">Queen</option>
-          <option value="Staten Island">Staten Island</option>
-          <option value="Brooklyn">Brooklyn</option>
-        </select>
-        <label for="date"></label>
-        <input type="date" id="date" name="date" />
-        <label for="date"></label>
-        <input type="date" id="date" name="date" />
-        <a
-          href="https://docs.google.com/spreadsheets/d/1ZuDo8sC-PvVGNqK69gyDTrvqt5XWRgx9/edit?usp=drive_link&ouid=115020941835307320291&rtpof=true&sd=true"
-          target="_blank"
-          >DataSet NYC Property</a
-        >
-      </section>
-    </header>
-    <!-- Sidebar -->
-    <main>
-      <aside>
-        <div class="wrapper">
-          <div class="sidebar">
-            <!-- profile image & text -->
-            <div class="profile">
-              <h3>Section Balikpapan - Team 12</h3>
-              <img src="img/Revou.png" alt="profile_picture" />
-              <a href="mailto:blkpn.team12.revou@gmail.com"
-                >blkpn.team12.revou@gmail.com</a
-              >
-            </div>
-            <!-- menu item -->
-            <ul>
-              <li><a class="active" href="#">Dashboard</a></li>
-              <li><a href="#">Problem Statement</a></li>
-              <li><a href="#">Recommendation</a></li>
-            </ul>
-          </div>
-        </div>
-      </aside>
-      <!--First Box-->
-      <section>
-        <div class="main">
-          <article class="analytics">
-            <h2>Sales Volume</h2>
-            <div class="chart-container">
-              <canvas id="chartSales"></canvas>
-            </div>
-          </article>
-
-          <div class="map">
-            <article class="analytics">
-              <h2>Map Borough</h2>
-              <img class="img-map" src="img/image-map.png" alt="map" />
-            </article>
-          </div>
-        </div>
-        <div class="container">
-          <div class="card">
-            <div class="card-header">Total Revenue</div>
-            <div class="card-body">
-              <div class="value">$420.231</div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header">Total Transaction</div>
-            <div class="card-body">
-              <div class="value">245.875</div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header">Avarage sales</div>
-            <div class="card-body">
-              <div class="value">$322.231</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--Second Box-->
-      <section class="top-building">
+      <div>
         <div class="main-high-building">
-          <article class="high-building">
-            <h2>Top 5 Highest Sales by Categories</h2>
-            <img class="img-top" src="img/top building.png" alt="" />
-          </article>
+          <article class="lower-building">
+            <h2>Top 5 Lowest Sales by Category</h2>
+            <canvas id="bottomCategoriesHorizontalBarChart"></canvas>
         </div>
+        </article>
+      </div>
+      <div>
+        <div class="main-high-building">
+          <article class="avg">
+            <h2>Top 5 Categories by Total Units</h2>
+            <div class="size-canvas-unit">
+              <canvas id="topCategoriesDoughnutChart"></canvas>
+            </div>
+        </div>
+        </article>
+      </div>
 
-        <div>
-          <div class="main-high-building">
-            <article class="avg">
-              <h2>Categories by Average Price</h2>
-              <img class="img-top" src="img/top building.png" alt="" />
-            </article>
-          </div>
-        </div>
-        <div>
-          <div class="main-high-building">
-            <article class="lower-building">
-              <h2>Top 5 Lowest Sales by Category</h2>
-              <img class="img-top" src="img/top building.png" alt="" />
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="data-tables">
-        <h1>Table NYC Property Sales</h1>
-        <table id="nycTable">
+      </div>
+    </section>
+    <section class="data-tables">
+      <h1>Table NYC Property Sales</h1>
+      <div>
+        <table id="salesTable">
           <thead>
             <tr>
-              <th>Name Borough</th>
-              <th>Category building</th>
-              <th>Sales</th>
+              <th>BOROUGH</th>
+              <th>NEIGHBORHOOD</th>
+              <th>BUILDING CLASS CATEGORY</th>
+              <th>TAX CLASS AT PRESENT</th>
+              <th>TOTAL UNITS</th>
+              <th>LAND SQUARE FEET</th>
+              <th>GROSS SQUARE FEET</th>
+              <th>YEAR BUILT</th>
+              <th>SALE PRICE</th>
+              <th>SALE DATE</th>
             </tr>
           </thead>
         </table>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <!-- Create web footer section -->
-    <footer>
-      <p>&copy; 2024 Dashboard. All rights reserved.</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.0.8/r-3.0.2/datatables.min.js"></script>
-    <script src="script.js"></script>
-    <script>
-      // Data Tables
-
-      // async function fetchData() {
-      //   const response = await fetch("./json/NycPropertySales.json");
-      //   return response.json();
-      // }
-
-      // function CreateNycTable(data) {
-      //   return new DataTable("nycTable", {
-      //     data: data,
-      //     columns: [
-      //       { data: "name_borough" },
-      //       { data: "building_class_category" },
-      //       { data: "sale_price" },
-      //     ],
-      //   });
-      // }
-
-      // async function main() {
-      //   const data = await fetchData();
-      //   const nycTable = CreateNycTable(data);
-      //   console.log({ data });
-      // }
-
-      //
-      const chartSales = document.getElementById("chartSales").getContext("2d");
-
-      const renderSalesTrend = () => {
-        new Chart(chartSales, {
-          type: "bar",
-          data: {
-            labels: [
-              "Januari",
-              "Februari",
-              "Maret",
-              "April",
-              "Mei",
-              "Juni",
-              "Juli",
-              "Agustus",
-              "September",
-              "Oktober",
-              "November",
-              "Desember",
-            ],
-            datasets: [
-              {
-                label: "Total Penjualan",
-                data: [
-                  5704, 8322, 12448, 8757, 10123, 5544, 8614, 13051, 10353,
-                  8473, 6809, 12320,
-                ],
-                backgroundColor: "rgba(75, 192, 192, 0.2)",
-                borderColor: "rgba(75, 192, 192, 1)",
-                borderWidth: 1,
-              },
-            ],
-          },
-          options: {
-            // responsive: true,
-            // maintainAspectRatio: false,
-            scales: {
-              y: {
-                beginAtZero: true,
-              },
-            },
-          },
-        });
-      };
-
-      fetch("./json/chartSales.json")
-        .then((response) => response.json())
-        .then((response) => {
-          console.log(response.datasets);
-        });
-    </script>
-  </body>
+  <!-- Create web footer section -->
+  <footer>
+    <p>&copy; 2024 Dashboard. All rights reserved.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.0.8/r-3.0.2/datatables.min.js"></script>
+  <script src="./js/geoJsonData.js"></script>
+  <script src="./js/MapNyc.js"></script>
+  <script src="./js/script.js" type="module"></script>
+</body>
 </html>
