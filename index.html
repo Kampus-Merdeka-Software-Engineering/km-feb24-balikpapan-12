@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
+    <link
+      href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -121,6 +125,18 @@
           </div>
         </div>
       </section>
+      <section class="data-tables">
+        <h1>Table NYC Property Sales</h1>
+        <table id="nycTable">
+          <thead>
+            <tr>
+              <th>Name Borough</th>
+              <th>Category building</th>
+              <th>Sales</th>
+            </tr>
+          </thead>
+        </table>
+      </section>
     </main>
 
     <!-- Create web footer section -->
@@ -129,8 +145,34 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.0.8/r-3.0.2/datatables.min.js"></script>
     <script src="script.js"></script>
     <script>
+      // Data Tables
+
+      // async function fetchData() {
+      //   const response = await fetch("./json/NycPropertySales.json");
+      //   return response.json();
+      // }
+
+      // function CreateNycTable(data) {
+      //   return new DataTable("nycTable", {
+      //     data: data,
+      //     columns: [
+      //       { data: "name_borough" },
+      //       { data: "building_class_category" },
+      //       { data: "sale_price" },
+      //     ],
+      //   });
+      // }
+
+      // async function main() {
+      //   const data = await fetchData();
+      //   const nycTable = CreateNycTable(data);
+      //   console.log({ data });
+      // }
+
+      //
       const chartSales = document.getElementById("chartSales").getContext("2d");
 
       const renderSalesTrend = () => {

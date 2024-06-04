@@ -351,6 +351,16 @@ footer {
   display: block;
 }
 
+.data-tables {
+  border: 1px solid black;
+  box-sizing: border-box;
+  width: 100%;
+  height: 200%;
+}
+.data-tables h1 {
+  color: black;
+}
+
 @media screen and (min-width: 1200px) {
   .container_box {
     grid-template-columns: repeat(3, 1fr);
