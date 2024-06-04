@@ -207,7 +207,9 @@ footer {
 
 .date {
   border-radius: 15px;
-  border: 1px solid #8f8a8a;
+  border: 1px solid rgb(11, 11, 54);
+  background-color: #ffffff;
+  color: rgb(11, 11, 54);
   height: 30px;
   width: 135px;
   font-size: 15px;
@@ -215,12 +217,12 @@ footer {
   margin-top: -20px;
   padding: 5px;
   text-align: center;
-  background-color: rgb(11, 11, 54);
-  color: rgb(255, 255, 255);
 }
 #borough-filter {
   border-radius: 15px;
-  border: 1px solid #8f8a8a;
+  border: 1px solid rgb(11, 11, 54);
+  background-color: #ffffff;
+  color: rgb(11, 11, 54);
   height: 30px;
   width: 135px;
   font-size: 15px;
@@ -228,8 +230,6 @@ footer {
   margin-top: -20px;
   padding: 5px;
   text-align: center;
-  background-color: rgb(11, 11, 54);
-  color: whitesmoke;
 }
 .filter {
   display: inline-block;
