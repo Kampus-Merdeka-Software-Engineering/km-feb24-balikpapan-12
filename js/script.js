@@ -559,6 +559,7 @@ function renderTopCategoriesDoughnutChartByUnits(topCategories) {
       ],
     },
     options: {
+      maintainAspectRation:false,
       plugins: {
         title: {
           display: true,
