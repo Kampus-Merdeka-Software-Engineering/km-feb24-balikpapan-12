@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -62,7 +62,7 @@
       <aside>
         <div class="wrapper">
           <div class="sidebar">
-            <!-- profile image & text -->
+            <!-- profile image & text  -->
             <div class="profile">
               <h3>Section Balikpapan - Team 12</h3>
               <img src="img/Revou.png" alt="profile_picture" />
@@ -75,71 +75,78 @@
               <li><a class="active" href="#">Dashboard</a></li>
             </ul>
           </div>
+
+          <!--First Box-->
+          <div class="container">
+            <div class="card">
+              <div class="card-header">Total Revenue</div>
+              <div class="card-body">
+                <div class="value" id="totalSales"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Total Transaction</div>
+              <div class="card-body">
+                <div class="value" id="totalUnits"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Avarage sales</div>
+              <div class="card-body">
+                <div class="value" id="averageSales"></div>
+              </div>
+            </div>
+          </div>
+          <section>
+            <div class="main">
+              <article class="analytics">
+                <h2>Sales Volume</h2>
+                <div class="chart-container">
+                  <canvas id="totalMontlySales"></canvas>
+                </div>
+              </article>
+              <div class="map">
+                <h2>NYC Map Borough</h2>
+                <div id="map"></div>
+              </div>
+            </div>
+          </section>
         </div>
       </aside>
-      <!--First Box-->
-      <section>
-        <div class="main">
-          <article class="analytics">
-            <h2>Sales Volume</h2>
-            <div class="chart-container">
-              <canvas id="totalMontlySales"></canvas>
-            </div>
-          </article>
-
-          <div class="map">
-            <h2>NYC Map Borough</h2>
-            <div id="map" class="analytics"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="card">
-            <div class="card-header">Total Revenue</div>
-            <div class="card-body">
-              <div class="value" id="totalSales"></div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header">Total Transaction</div>
-            <div class="card-body">
-              <div class="value" id="totalUnits"></div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header">Avarage sales</div>
-            <div class="card-body">
-              <div class="value" id="averageSales"></div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!--Second Box-->
       <section class="top-building">
         <div class="main-high-building">
           <article class="high-building">
             <h2>Top 5 Highest Sales by Categories</h2>
-            <canvas id="topCategoriesHorizontalBarChart"></canvas>
+            <canvas
+              id="topCategoriesHorizontalBarChart"
+              width="400"
+              height="400"
+            ></canvas>
           </article>
         </div>
-
-        <div>
-          <div class="main-high-building">
-            <article class="lower-building">
-              <h2>Top 5 Lowest Sales by Category</h2>
-              <canvas id="bottomCategoriesHorizontalBarChart"></canvas>
-            </article>
-          </div>
+        <div class="main-high-building">
+          <article class="lower-building">
+            <h2>Top 5 Lowest Sales by Category</h2>
+            <canvas
+              id="bottomCategoriesHorizontalBarChart"
+              width="400"
+              height="400"
+            ></canvas>
+          </article>
         </div>
-        <div>
-          <div class="main-high-building">
-            <article class="avg">
-              <h2>Top 5 Categories by Total Units</h2>
-              <div class="size-canvas-unit">
-                <canvas id="topCategoriesDoughnutChart"></canvas>
-              </div>
-            </article>
-          </div>
+        <div class="main-high-building">
+          <article class="avg">
+            <h2>Top 5 Categories by Total Units</h2>
+            <div class="size-canvas-unit">
+              <canvas
+                id="topCategoriesDoughnutChart"
+                width="400"
+                height="400"
+              ></canvas>
+            </div>
+          </article>
         </div>
       </section>
       <section class="data-tables">
@@ -179,6 +186,6 @@
     <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.0.8/r-3.0.2/datatables.min.js"></script>
     <script src="./js/geoJsonData.js"></script>
     <script src="./js/MapNyc.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" type="module"></script>
   </body>
 </html>
