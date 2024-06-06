@@ -30,89 +30,96 @@
       </div>
 
       <section class="filter">
-        <select name="date" id="borough-filter">
-          <option value="-1">All Borough</option>
-        </select>
+        <div class="filter-list">
+          <select name="date" id="borough-filter">
+            <option value="-1">All Borough</option>
+          </select>
 
-        <input
-          type="date"
-          class="date"
-          name="startDate"
-          id="startDate"
-          min="2016-09-01"
-          max="2017-08-31"
-        />
-        <input
-          type="date"
-          class="date"
-          name="endDate"
-          id="endDate"
-          min="2016-09-01"
-          max="2017-08-31"
-        />
+          <input
+            type="date"
+            class="date"
+            name="startDate"
+            id="startDate"
+            min="2016-09-01"
+            max="2017-08-31"
+          />
+          <input
+            type="date"
+            class="date"
+            name="endDate"
+            id="endDate"
+            min="2016-09-01"
+            max="2017-08-31"
+          />
+        </div>
+
         <a
           href="https://docs.google.com/spreadsheets/d/1ZuDo8sC-PvVGNqK69gyDTrvqt5XWRgx9/edit?usp=sharing&ouid=112421625717964448791&rtpof=true&sd=true"
           target="_blank"
           >DataSet NYC Property</a
         >
       </section>
+      <aside>
+        <!-- <div class="wrapper"> -->
+        <div class="sidebar">
+          <!-- profile image & text  -->
+          <div class="profile">
+            <h3>Section Balikpapan - Team 12</h3>
+            <img src="img/Revou.png" alt="profile_picture" />
+            <a href="mailto:blkpn.team12.revou@gmail.com"
+              >blkpn.team12.revou@gmail.com</a
+            >
+          </div>
+          <!-- menu item -->
+          <ul>
+            <li><a class="active" href="#">Dashboard</a></li>
+          </ul>
+        </div>
+
+        <!--First Box-->
+
+        <!-- </div> -->
+      </aside>
     </header>
     <!-- Sidebar -->
-    <main>
-      <aside>
-        <div class="wrapper">
-          <div class="sidebar">
-            <!-- profile image & text  -->
-            <div class="profile">
-              <h3>Section Balikpapan - Team 12</h3>
-              <img src="img/Revou.png" alt="profile_picture" />
-              <a href="mailto:blkpn.team12.revou@gmail.com"
-                >blkpn.team12.revou@gmail.com</a
-              >
-            </div>
-            <!-- menu item -->
-            <ul>
-              <li><a class="active" href="#">Dashboard</a></li>
-            </ul>
-          </div>
 
-          <!--First Box-->
-          <div class="container">
-            <div class="card">
-              <div class="card-header">Total Revenue</div>
-              <div class="card-body">
-                <div class="value" id="totalSales"></div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">Total Transaction</div>
-              <div class="card-body">
-                <div class="value" id="totalUnits"></div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">Avarage sales</div>
-              <div class="card-body">
-                <div class="value" id="averageSales"></div>
-              </div>
+    <main>
+      <div class="wrapper">
+        <div class="container">
+          <div class="card">
+            <div class="card-header">Total Revenue</div>
+            <div class="card-body">
+              <div class="value" id="totalSales"></div>
             </div>
           </div>
-          <section>
-            <div class="main">
-              <article class="analytics">
-                <h2>Sales Volume</h2>
-                <div class="chart-container">
-                  <canvas id="totalMontlySales"></canvas>
-                </div>
-              </article>
-              <div class="map">
-                <h2>NYC Map Borough</h2>
-                <div id="map"></div>
-              </div>
+          <div class="card">
+            <div class="card-header">Total Transaction</div>
+            <div class="card-body">
+              <div class="value" id="totalUnits"></div>
             </div>
-          </section>
+          </div>
+          <div class="card">
+            <div class="card-header">Avarage sales</div>
+            <div class="card-body">
+              <div class="value" id="averageSales"></div>
+            </div>
+          </div>
         </div>
-      </aside>
+        <section class="main-section">
+          <div class="main">
+            <article class="analytics">
+              <h2>Sales Volume</h2>
+              <div class="chart-container">
+                <canvas id="totalMontlySales"></canvas>
+              </div>
+            </article>
+            <div class="map-wrapper">
+              <h2>NYC Map Borough</h2>
+              <div id="map" class="map"></div>
+            </div>
+          </div>
+        </section>
+      </div>
 
       <!--Second Box-->
       <section class="top-building">
