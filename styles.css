@@ -372,6 +372,194 @@ footer {
   height: 100%;
 }
 
+/* Setting Responsive */
+
+@media screen and (max-width :600px){
+  header {
+    top: auto;
+  }
+  .header{
+    position: statics;
+    display: flex;
+    flex-direction: column;
+  }
+  .filter {
+    width: 100%;
+    margin: 0%;
+    left: 0%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filter-list{
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    
+  }
+
+  .filter a{
+    width: 100%;
+    text-align: center;
+  }
+
+  #borough-filter,
+  .filter-list .date {
+    width: 100%;
+  }
+
+  .sidebar{
+    width: 100%;
+    position: static;
+    height: auto;
+    top : 0%;
+    left : 0%;
+    bottom :0%;
+    border-radius: 0px;
+    background-color: #ffffff;
+    padding: 20px;
+    transition: all 0.5s ease;
+  }
+  
+  main{
+    width: 100%;
+    margin: 0%;
+    left: 0%;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+   
+  }
+
+  .wrapper .container {
+    width: 100%;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .top-building {
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+  }
+
+  section.top-building {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0%;
+    margin-top: 20px;
+  }
+
+  .main-high-building .high-building {
+    box-shadow: none;
+  }
+}
+
+@media screen and (min-width :601px) and (max-width:1200px){
+  header {
+    top: auto;
+  }
+  .header{
+    display: flex;
+    flex-direction: column;
+  }
+  .filter {
+    width: 100%;
+    margin: 0%;
+    left: 0%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filter-list{
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    
+  }
+
+  .filter a{
+    width: 100%;
+    text-align: center;
+  }
+
+  #borough-filter,
+  .filter-list .date {
+    width: 100%;
+  }
+
+  .sidebar{
+    width: 100%;
+    position: static;
+    height: auto;
+    top : 0%;
+    left : 0%;
+    bottom :0%;
+    border-radius: 0px;
+    background-color: #ffffff;
+    padding: 20px;
+    transition: all 0.5s ease;
+  }
+
+  main{
+    width: 100%;
+    margin: 0%;
+    left: 0%;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+   
+  }
+
+  .wrapper .container {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .card {
+    width: 500px;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .top-building {
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+  }
+
+  section.top-building {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0%;
+    margin-top: 20px;
+  }
+
+  .main-high-building .high-building {
+    box-shadow: none;
+  }
+
+}
 @media screen and (min-width: 1200px) {
   .container_box {
     grid-template-columns: repeat(3, 1fr);
