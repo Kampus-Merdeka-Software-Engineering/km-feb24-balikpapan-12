@@ -406,6 +406,7 @@ function renderCharts(labels, datasets) {
       })),
     },
     options: {
+      maintainAspectRation: false,
       interaction: {
         mode: "index",
       },
@@ -559,7 +560,7 @@ function renderTopCategoriesDoughnutChartByUnits(topCategories) {
       ],
     },
     options: {
-      maintainAspectRation:false,
+      
       plugins: {
         title: {
           display: true,

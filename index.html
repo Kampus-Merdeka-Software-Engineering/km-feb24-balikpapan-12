@@ -105,40 +105,41 @@
           <div class="main">
             <article class="analytics">
               <h2>Sales Volume</h2>
-              <div class="chart-container">
-                <canvas id="totalMontlySales"></canvas>
+              <div class="chart-box">
+                <canvas
+                  id="totalMontlySales"
+                  style="width: 500px; height: 190px"
+                ></canvas>
               </div>
             </article>
-            <div class="map-wrapper">
-              <h2>NYC Map Borough</h2>
-              <div id="map" class="map"></div>
-            </div>
           </div>
         </section>
       </div>
+
+      <!-- map section start -->
+      <section>
+        <div class="map-wrapper">
+          <h2>NYC Map Borough</h2>
+          <div id="map" class="map"></div>
+        </div>
+      </section>
+      <!-- map section end -->
+
       <!--section Second-->
       <section class="top-building">
         <div class="main-high-building">
           <article class="high-building">
             <h2>Top 5 Highest Sales by Categories</h2>
-            <canvas
-              id="topCategoriesHorizontalBarChart"
-              width="400"
-              height="400"
-            ></canvas>
+            <canvas id="topCategoriesHorizontalBarChart"></canvas>
           </article>
         </div>
         <div class="main-high-building">
           <article class="lower-building">
             <h2>Top 5 Lowest Sales by Category</h2>
-            <canvas
-              id="bottomCategoriesHorizontalBarChart"
-              width="400"
-              height="400"
-            ></canvas>
+            <canvas id="bottomCategoriesHorizontalBarChart"></canvas>
           </article>
         </div>
-        <div class="main-high-building">
+        <!-- <div class="main-high-building">
           <article class="avg">
             <h2>Top 5 Categories by Total Units</h2>
             <div class="size-canvas-unit">
@@ -149,12 +150,23 @@
               ></canvas>
             </div>
           </article>
+        </div> -->
+      </section>
+
+      <section>
+        <div class="main-unit-building">
+          <article class="avg">
+            <h2>Top 5 Categories by Total Units</h2>
+            <div class="size-canvas-unit">
+              <canvas id="topCategoriesDoughnutChart"></canvas>
+            </div>
+          </article>
         </div>
       </section>
       <!-- Data Table -->
-      <section class="data-tables">
+      <section class="table-container">
         <h1>Table NYC Property Sales</h1>
-        <div>
+        <div class="data-tables">
           <table id="salesTable">
             <thead>
               <tr>
