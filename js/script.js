@@ -406,14 +406,10 @@ function renderCharts(labels, datasets) {
       })),
     },
     options: {
+      responsive: true,
       maintainAspectRation: false,
       interaction: {
         mode: "index",
-      },
-      scales: {
-        y: {
-          beginAtZero: true,
-        },
       },
     },
   });
@@ -455,6 +451,8 @@ function renderTopCategoriesHorizontalBarChart(topCategories) {
       ],
     },
     options: {
+      responsive: true,
+      maintainAspectRation: false,
       indexAxis: "y",
       scales: {
         x: {
@@ -467,10 +465,6 @@ function renderTopCategoriesHorizontalBarChart(topCategories) {
         },
       },
       plugins: {
-        title: {
-          display: true,
-          text: "Top 5 Categories by Sales",
-        },
       },
     },
   });
@@ -511,6 +505,8 @@ function renderBottomCategoriesHorizontalBarChart(bottomCategories) {
       ],
     },
     options: {
+      responsive: true,
+      maintainAspectRation: false,
       indexAxis: "y",
       scales: {
         x: {
@@ -523,10 +519,6 @@ function renderBottomCategoriesHorizontalBarChart(bottomCategories) {
         },
       },
       plugins: {
-        title: {
-          display: true,
-          text: "Bottom 5 Categories by Sales",
-        },
       },
     },
   });
@@ -563,7 +555,7 @@ function renderTopCategoriesDoughnutChartByUnits(topCategories) {
       
       plugins: {
         title: {
-          display: true,
+          display: false,
         },
       },
     },
@@ -648,3 +640,4 @@ const dataTable = filter.getFilteredData();
 // Create and populate the sales table with the filtered data
 tableDataset = createSalesTable(dataTable);
 }
+

@@ -72,8 +72,8 @@
             >
           </div>
           <!-- menu item -->
-          <ul>
-            <li><a class="active" href="#">Dashboard</a></li>
+          <ul id="btns">
+            <li><a class="btn" href="">Dashboard</a></li>
           </ul>
         </div>
       </aside>
@@ -106,10 +106,7 @@
             <article class="analytics">
               <h2>Sales Volume</h2>
               <div class="chart-box">
-                <canvas
-                  id="totalMontlySales"
-                  style="width: 500px; height: 190px"
-                ></canvas>
+                <canvas id="totalMontlySales"></canvas>
               </div>
             </article>
           </div>
@@ -117,7 +114,7 @@
       </div>
 
       <!-- map section start -->
-      <section>
+      <section class="map-container">
         <div class="map-wrapper">
           <h2>NYC Map Borough</h2>
           <div id="map" class="map"></div>
@@ -139,21 +136,10 @@
             <canvas id="bottomCategoriesHorizontalBarChart"></canvas>
           </article>
         </div>
-        <!-- <div class="main-high-building">
-          <article class="avg">
-            <h2>Top 5 Categories by Total Units</h2>
-            <div class="size-canvas-unit">
-              <canvas
-                id="topCategoriesDoughnutChart"
-                width="400"
-                height="400"
-              ></canvas>
-            </div>
-          </article>
-        </div> -->
       </section>
 
-      <section>
+      <!-- third section start -->
+      <section class="doughnut">
         <div class="main-unit-building">
           <article class="avg">
             <h2>Top 5 Categories by Total Units</h2>
@@ -163,6 +149,8 @@
           </article>
         </div>
       </section>
+      <!-- third section end -->
+
       <!-- Data Table -->
       <section class="table-container">
         <h1>Table NYC Property Sales</h1>
