@@ -60,7 +60,9 @@ async function main() {
         : "Hover over a state");
   };
 
-  var map = L.map("map").setView([40.7447677, -73.8947312], 10);
+  var map = L.map("map", {
+    scrollWheelZoom: false,
+  }).setView([40.7447677, -73.8947312], 10);
 
   info.addTo(map);
 
