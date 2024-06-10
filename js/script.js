@@ -3,6 +3,7 @@ async function fetchData() {
   const response = await fetch("../json/DatasetNycPropertySales.json");
   const data = await response.json();
   console.log({ data });
+  return data;
 }
 fetchData();
 
@@ -94,7 +95,8 @@ function createSalesTable(data) {
 }
 
 // Main function to initialize the application
-function main() {
+async function main() {
+  const data = await fetchData();
   // Create sales table with imported data
   createSalesTable(data);
 
