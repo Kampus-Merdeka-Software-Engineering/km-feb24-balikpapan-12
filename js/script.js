@@ -2,7 +2,6 @@
 async function fetchData() {
   const response = await fetch("../json/DatasetNycPropertySales.json");
   const data = await response.json();
-  console.log({ data });
   return data;
 }
 fetchData();
@@ -270,7 +269,7 @@ function createFilter(data, selectedBorough = -1, startDate, endDate) {
   // Get average sales
   function getAverageSales() {
     let totalSales = sum(mappedData, "SALE PRICE");
-    let average = totalSales / mappedData.length;
+    let average = mappedData.length ? totalSales / mappedData.length : 0;
     return average;
   }
 
