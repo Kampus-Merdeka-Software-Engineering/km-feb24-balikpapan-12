@@ -1,5 +1,10 @@
 //Import Dataset NYC Property Sales
-import data from "../json/DatasetNycPropertySales.json" with { type: "json" };
+async function fetchData() {
+  const response = await fetch("../json/DatasetNycPropertySales.json");
+  const data = await response.json();
+  console.log({ data });
+}
+fetchData();
 
 // Define constants for boroughs
 const BOROUGH = {
@@ -93,7 +98,7 @@ function main() {
   // Create sales table with imported data
   createSalesTable(data);
 
-   // Apply filter and render charts
+  // Apply filter and render charts
   const filter = createFilter(
     data,
     selectedBoroughFilter,
@@ -127,7 +132,7 @@ function main() {
     filterBorough.appendChild(option);
   });
 
-   // Handle date filter changes
+  // Handle date filter changes
   const filterStartDate = document.getElementById("startDate");
   const filterEndDate = document.getElementById("endDate");
 
@@ -186,11 +191,11 @@ function createFilter(data, selectedBorough = -1, startDate, endDate) {
   const startDateObj = new Date(startDate);
   const endDateObj = new Date(endDate);
 
-// Generate labels for each month between startDate and endDate
+  // Generate labels for each month between startDate and endDate
   const x = d3.scaleUtc().domain([startDateObj, endDateObj]);
   const labels = x.ticks(d3.utcMonth.every(1));
 
-// Map and filter the dataset
+  // Map and filter the dataset
   const mappedData = data
     .map((item) => {
       const [date, month, year] = item["SALE DATE"].split("/").map(Number);
@@ -211,7 +216,7 @@ function createFilter(data, selectedBorough = -1, startDate, endDate) {
       (item) => selectedBorough === -1 || item.BOROUGH == selectedBorough
     );
 
-    // Get total monthly sales
+  // Get total monthly sales
   function getTotalMonthlySales() {
     const datasets = Object.keys(BOROUGH).map((key) => {
       const data = labels.map((date) => {
@@ -248,12 +253,12 @@ function createFilter(data, selectedBorough = -1, startDate, endDate) {
       ),
     };
   }
- // Get total sales
+  // Get total sales
   function getTotalSales() {
     return formatter.format(sum(mappedData, "SALE PRICE"));
   }
 
- // Get total units
+  // Get total units
   function getTotalUnits() {
     return sum(mappedData, "TOTAL UNITS")
       .toFixed(0)
@@ -394,15 +399,11 @@ function renderCharts(labels, datasets) {
           "#103D83",
           "#71CA66",
           "#FF9170",
-          "#FEB152"
+          "#FEB152",
         ][index % 5],
-        borderColor: [
-          "#FF6384",
-          "#FFA726",
-          "#FFCE56",
-          "#4BC0C0",
-          "#36A2EB"
-        ][index % 5],
+        borderColor: ["#FF6384", "#FFA726", "#FFCE56", "#4BC0C0", "#36A2EB"][
+          index % 5
+        ],
       })),
     },
     options: {
@@ -435,19 +436,13 @@ function renderTopCategoriesHorizontalBarChart(topCategories) {
           label: "Total Sales",
           data: data,
           backgroundColor: [
-  "#06285C",
-  "#103D83",
-  "#71CA66",
-  "#FF9170",
-  "#FEB152"
-],
-          borderColor: [
-  "#FF6384",
-  "#FFA726",
-  "#FFCE56",
-  "#4BC0C0",
-  "#36A2EB"
-],
+            "#06285C",
+            "#103D83",
+            "#71CA66",
+            "#FF9170",
+            "#FEB152",
+          ],
+          borderColor: ["#FF6384", "#FFA726", "#FFCE56", "#4BC0C0", "#36A2EB"],
 
           borderWidth: 1,
         },
@@ -491,19 +486,13 @@ function renderBottomCategoriesHorizontalBarChart(bottomCategories) {
           label: "Total Sales",
           data: data,
           backgroundColor: [
-  "#06285C",
-  "#103D83",
-  "#71CA66",
-  "#FF9170",
-  "#FEB152"
-],
-          borderColor: [
-  "#FF6384",
-  "#FFA726",
-  "#FFCE56",
-  "#4BC0C0",
-  "#36A2EB"
-],
+            "#06285C",
+            "#103D83",
+            "#71CA66",
+            "#FF9170",
+            "#FEB152",
+          ],
+          borderColor: ["#FF6384", "#FFA726", "#FFCE56", "#4BC0C0", "#36A2EB"],
 
           borderWidth: 1,
         },
@@ -547,19 +536,19 @@ function renderTopCategoriesDoughnutChartByUnits(topCategories) {
           label: "Total Units",
           data: data,
           backgroundColor: [
-  "#06285C",
-  "#103D83",
-  "#71CA66",
-  "#FF9170",
-  "#FEB152"
-],
+            "#06285C",
+            "#103D83",
+            "#71CA66",
+            "#FF9170",
+            "#FEB152",
+          ],
 
           hoverOffset: 4,
         },
       ],
     },
     options: {
-      maintainAspectRation:false,
+      maintainAspectRation: false,
       plugins: {
         title: {
           display: true,
@@ -622,28 +611,30 @@ function render(filter) {
   // Update average sales
   renderAverageSales(filter.getAverageSales());
 
- // Extract datasets and labels from the total monthly sales filter
-const { datasets, labels } = filter.getTotalMonthlySales();
-// Render the total monthly sales chart
-totalMonthlySaleChart = renderCharts(labels, datasets);
+  // Extract datasets and labels from the total monthly sales filter
+  const { datasets, labels } = filter.getTotalMonthlySales();
+  // Render the total monthly sales chart
+  totalMonthlySaleChart = renderCharts(labels, datasets);
 
-// Get the top categories by sales from the filter
-const topCategories = filter.getTopCategories();
-// Render the top categories horizontal bar chart
-topCategoriesChart = renderTopCategoriesHorizontalBarChart(topCategories);
+  // Get the top categories by sales from the filter
+  const topCategories = filter.getTopCategories();
+  // Render the top categories horizontal bar chart
+  topCategoriesChart = renderTopCategoriesHorizontalBarChart(topCategories);
 
-// Get the bottom categories by sales from the filter
-const bottomCategories = filter.getBottomCategories();
-// Render the bottom categories horizontal bar chart
-bottomCategoriesChart = renderBottomCategoriesHorizontalBarChart(bottomCategories);
+  // Get the bottom categories by sales from the filter
+  const bottomCategories = filter.getBottomCategories();
+  // Render the bottom categories horizontal bar chart
+  bottomCategoriesChart =
+    renderBottomCategoriesHorizontalBarChart(bottomCategories);
 
-// Get the top categories by units from the filter
-const topCategoriesByUnits = filter.getTopCategoriesByUnits();
-// Render the top categories doughnut chart by units
-totalUnitCategoriesChart = renderTopCategoriesDoughnutChartByUnits(topCategoriesByUnits);
+  // Get the top categories by units from the filter
+  const topCategoriesByUnits = filter.getTopCategoriesByUnits();
+  // Render the top categories doughnut chart by units
+  totalUnitCategoriesChart =
+    renderTopCategoriesDoughnutChartByUnits(topCategoriesByUnits);
 
-// Get the filtered data from the filter
-const dataTable = filter.getFilteredData();
-// Create and populate the sales table with the filtered data
-tableDataset = createSalesTable(dataTable);
+  // Get the filtered data from the filter
+  const dataTable = filter.getFilteredData();
+  // Create and populate the sales table with the filtered data
+  tableDataset = createSalesTable(dataTable);
 }

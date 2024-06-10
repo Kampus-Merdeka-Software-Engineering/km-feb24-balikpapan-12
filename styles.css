@@ -372,8 +372,6 @@ footer {
   height: 100%;
 }
 
-@media screen and (min-width: 1200px) {
-  .container_box {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.container_box {
+  grid-template-columns: repeat(3, 1fr);
 }
